@@ -35,34 +35,30 @@ class _InputPageState extends State<InputPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Expanded(
-                    child: GestureDetector(
-                      onTap: () => setState(() {
+                    child: ReusableCard(
+                      onTapFunction: () => setState(() {
                         selectedGender = Gender.male;
                       }),
-                      child: ReusableCard(
-                        color: selectedGender == Gender.male
-                            ? activeCardColor
-                            : inactiveCardColor,
-                        cardChild: CardChild(
-                          icon: FontAwesomeIcons.mars,
-                          label: 'MALE',
-                        ),
+                      color: selectedGender == Gender.male
+                          ? activeCardColor
+                          : inactiveCardColor,
+                      cardChild: CardChild(
+                        icon: FontAwesomeIcons.mars,
+                        label: 'MALE',
                       ),
                     ),
                   ),
                   Expanded(
-                    child: GestureDetector(
-                      onTap: () => setState(() {
+                    child: ReusableCard(
+                      onTapFunction: () => setState(() {
                         selectedGender = Gender.female;
                       }),
-                      child: ReusableCard(
-                        color: selectedGender == Gender.female
-                            ? activeCardColor
-                            : inactiveCardColor,
-                        cardChild: CardChild(
-                          icon: FontAwesomeIcons.venus,
-                          label: 'FEMALE',
-                        ),
+                      color: selectedGender == Gender.female
+                          ? activeCardColor
+                          : inactiveCardColor,
+                      cardChild: CardChild(
+                        icon: FontAwesomeIcons.venus,
+                        label: 'FEMALE',
                       ),
                     ),
                   ),
