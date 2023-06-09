@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../components/bottom_button.dart';
 
 class ResultsPage extends StatefulWidget {
-  const ResultsPage();
+  // const ResultsPage();
 
   @override
   State<ResultsPage> createState() => _ResultsPageState();
