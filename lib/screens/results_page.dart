@@ -1,7 +1,7 @@
 import 'package:bmi_calculator/constants.dart';
-import 'package:bmi_calculator/reusable_card.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:flutter/material.dart';
-import 'bottom_button.dart';
+import '../components/bottom_button.dart';
 
 class ResultsPage extends StatefulWidget {
   const ResultsPage();
@@ -26,6 +26,8 @@ class _ResultsPageState extends State<ResultsPage> {
           Expanded(
             flex: 1,
             child: Container(
+              padding: EdgeInsets.all(15),
+              alignment: Alignment.bottomLeft,
               child: Text(
                 'Your Result',
                 style: kTitleTextStyle,
@@ -58,9 +60,9 @@ class _ResultsPageState extends State<ResultsPage> {
           ),
           BottomButton(
               onTap: () {
-                print('tapped \'CALCULATE\'.');
+                Navigator.pop(context);
               },
-              buttonTitle: 'CALCULATE')
+              buttonTitle: 'RE-CALCULATE')
         ],
       ),
     );
