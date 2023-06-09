@@ -3,14 +3,17 @@ import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:flutter/material.dart';
 import '../components/bottom_button.dart';
 
-class ResultsPage extends StatefulWidget {
-  // const ResultsPage();
+class ResultsPage extends StatelessWidget {
+  const ResultsPage({
+    required this.bmiResult,
+    required this.interpretation,
+    required this.resultText,
+  });
 
-  @override
-  State<ResultsPage> createState() => _ResultsPageState();
-}
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
 
-class _ResultsPageState extends State<ResultsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,15 +45,15 @@ class _ResultsPageState extends State<ResultsPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    'Result here',
+                    resultText.toUpperCase(),
                     style: kResultsTextStyle,
                   ),
                   Text(
-                    'BMI',
+                    bmiResult,
                     style: kBMIResultTextStyle,
                   ),
                   Text(
-                    'some sort of analysis of your BMI for context',
+                    interpretation,
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
                   ),

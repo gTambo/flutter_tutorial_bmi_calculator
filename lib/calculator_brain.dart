@@ -27,9 +27,9 @@ class CalculatorBrain {
     if (_bmi! >= 25) {
       return 'You suck; try harder';
     } else if (_bmi! > 18.5) {
-      return 'You also suck; try harder';
+      return 'You suck; try harder';
     } else {
-      return 'You still suck; try harder';
+      return 'You suck; try harder';
     }
   }
 }
