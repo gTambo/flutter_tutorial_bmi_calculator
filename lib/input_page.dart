@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/results_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'reusable_card.dart';
@@ -218,19 +219,22 @@ class _InputPageState extends State<InputPage> {
                 child: Center(
                   child: Text(
                     'CALCULATE',
-                    style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: kLargeButtonTextStyle,
                   ),
                 ),
                 color: kBottomContainerColor,
                 margin: EdgeInsets.only(top: 10),
+                padding: EdgeInsets.only(bottom: 20),
                 width: double.infinity,
                 height: kBottomContainerHeight,
               ),
               onTap: () {
-                Navigator.pushNamed(context, '/calculate');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ResultsPage(),
+                  ),
+                );
               },
             ),
           ],
